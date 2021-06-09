@@ -30,20 +30,20 @@ pub struct Graph {
     pub feat: FeatMap,
 }
 
-#[derive(Clone, Debug, Serialize, Deserialize)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct Coord {
     pub x: u64,
     pub y: u64,
 }
 
-#[derive(Clone, Debug, Serialize, Deserialize)]
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
 pub struct Layout {
     pub name: String,
     pub cost: Cost,
     pub coord: CoordMap,
 }
 
-#[derive(Clone, Debug, Default, Serialize, Deserialize)]
+#[derive(Clone, Debug, Default, Serialize, Deserialize, PartialEq)]
 pub struct Stack {
     pub layout: Vec<Layout>,
 }
